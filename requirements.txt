@@ -1,0 +1,8 @@
+streamlit
+opencv-python
+numpy
+Pillow
+subprocess
+time
+shutil
+base64
