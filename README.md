@@ -24,18 +24,18 @@ The following dependencies are required to run the project:
 
 You can install the necessary dependencies using:
 
-```bash
+``'bash
 pip install -r requirements.txt
 Setup
-Clone the repository:
+Clone the repository:'
 
-bash
+'''bash
 Copy
 git clone https://github.com/yourusername/video-frame-interpolation-super-resolution.git
 cd video-frame-interpolation-super-resolution
 Install dependencies:
 
-bash
+'''bash
 Copy
 pip install -r requirements.txt
 Download pre-trained models (optional but recommended):
