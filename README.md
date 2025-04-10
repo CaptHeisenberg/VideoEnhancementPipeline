@@ -1,126 +1,110 @@
-I apologize for the confusion. Here's the **complete README** in one single block of text, as you requested:
+#!/bin/bash
 
-```
-# Video Frame Interpolation and Super Resolution
+echo "# Video Frame Interpolation and Super Resolution"
 
-This repository provides implementations for **Video Frame Interpolation** using **RIFE** and **Super Resolution** using **ESRGAN**. It enhances video quality by generating smooth interpolated frames and upscaling low-resolution videos using deep learning models. Pre-trained models and custom training options are included for flexibility.
+echo "This repository provides implementations for **Video Frame Interpolation** using **RIFE** and **Super Resolution** using **ESRGAN**. It enhances video quality by generating smooth interpolated frames and upscaling low-resolution videos using deep learning models. Pre-trained models and custom training options are included for flexibility."
 
-## Features
+echo "## Features"
+echo "- **Frame Interpolation (RIFE)**: Generate high-quality intermediate frames to smooth motion or change video frame rates."
+echo "- **Super Resolution (ESRGAN)**: Enhance low-resolution videos or frames using state-of-the-art deep learning models to predict high-resolution outputs."
+echo "- **Pre-trained Models**: Ready-to-use pre-trained models for both interpolation (RIFE) and super resolution (ESRGAN)."
+echo "- **Customizable**: Easily train with your own dataset for custom video enhancement needs."
 
-- **Frame Interpolation (RIFE)**: Generate high-quality intermediate frames to smooth motion or change video frame rates.
-- **Super Resolution (ESRGAN)**: Enhance low-resolution videos or frames using state-of-the-art deep learning models to predict high-resolution outputs.
-- **Pre-trained Models**: Ready-to-use pre-trained models for both interpolation (RIFE) and super resolution (ESRGAN).
-- **Customizable**: Easily train with your own dataset for custom video enhancement needs.
+echo "## Requirements"
+echo "The following dependencies are required to run the project:"
+echo "- Python 3.6+"
+echo "- PyTorch (>=1.7.0)"
+echo "- OpenCV (>=4.5.0)"
+echo "- NumPy (>=1.19.0)"
+echo "- tqdm (>=4.50.0)"
+echo "- scikit-image (>=0.18.3)"
+echo "- FFmpeg (for video processing)"
+echo "- CUDA-enabled GPU (Recommended for better performance)"
 
-## Requirements
+echo "You can install the necessary dependencies using:"
 
-The following dependencies are required to run the project:
+echo "```bash"
+echo "pip install -r requirements.txt"
+echo "```"
 
-- Python 3.6+
-- PyTorch (>=1.7.0)
-- OpenCV (>=4.5.0)
-- NumPy (>=1.19.0)
-- tqdm (>=4.50.0)
-- scikit-image (>=0.18.3)
-- FFmpeg (for video processing)
-- CUDA-enabled GPU (Recommended for better performance)
+echo "## Setup"
 
-You can install the necessary dependencies using:
+echo "1. Clone the repository:"
 
-```bash
-pip install -r requirements.txt
-```
+echo "```bash"
+echo "git clone https://github.com/yourusername/video-frame-interpolation-super-resolution.git"
+echo "cd video-frame-interpolation-super-resolution"
+echo "```"
 
-## Setup
+echo "2. Install dependencies:"
 
-1. Clone the repository:
+echo "```bash"
+echo "pip install -r requirements.txt"
+echo "```"
 
-   ```bash
-   git clone https://github.com/yourusername/video-frame-interpolation-super-resolution.git
-   cd video-frame-interpolation-super-resolution
-   ```
+echo "3. Download pre-trained models (optional but recommended):"
+echo "- **ESRGAN**: Pre-trained models can be downloaded from [here](link-to-esrgan-model)."
+echo "- **RIFE**: Pre-trained models can be downloaded from [here](link-to-rife-model)."
 
-2. Install dependencies:
+echo "4. Set up FFmpeg to handle video file conversion, or use the default methods provided in the code."
 
-   ```bash
-   pip install -r requirements.txt
-   ```
+echo "## Usage"
 
-3. Download pre-trained models (optional but recommended):
+echo "### Frame Interpolation (RIFE)"
+echo "To perform frame interpolation on a video, run the following command:"
 
-   - **ESRGAN**: Pre-trained models can be downloaded from [here](link-to-esrgan-model).
-   - **RIFE**: Pre-trained models can be downloaded from [here](link-to-rife-model).
-   
-4. Set up FFmpeg to handle video file conversion, or use the default methods provided in the code.
+echo "```bash"
+echo "python frame_interpolation.py --input_video path_to_input_video.mp4 --output_video path_to_output_video.mp4"
+echo "```"
 
-## Usage
+echo "### Super Resolution (ESRGAN)"
+echo "To perform super resolution on a frame or image, run:"
 
-### Frame Interpolation (RIFE)
+echo "```bash"
+echo "python super_resolution.py --input_image path_to_input_image.jpg --output_image path_to_output_image.jpg"
+echo "```"
 
-To perform frame interpolation on a video, run the following command:
+echo "### Training Your Own Model"
+echo "To train a model from scratch using your own dataset, use the following:"
 
-```bash
-python frame_interpolation.py --input_video path_to_input_video.mp4 --output_video path_to_output_video.mp4
-```
+echo "```bash"
+echo "python train.py --dataset_path path_to_your_dataset --output_dir path_to_save_model"
+echo "```"
 
-### Super Resolution (ESRGAN)
+echo "Make sure to preprocess your data and split it into training and testing sets."
 
-To perform super resolution on a frame or image, run:
+echo "## Example"
+echo "Here is an example of using the frame interpolation and super resolution pipeline:"
 
-```bash
-python super_resolution.py --input_image path_to_input_image.jpg --output_image path_to_output_image.jpg
-```
+echo "1. **Step 1**: First, enhance the resolution of the low-resolution video using ESRGAN."
 
-### Training Your Own Model
+echo "```bash"
+echo "python super_resolution.py --input_video low_res_video.mp4 --output_video high_res_video.mp4"
+echo "```"
 
-To train a model from scratch using your own dataset, use the following:
+echo "2. **Step 2**: Then, apply frame interpolation using RIFE to generate additional frames."
 
-```bash
-python train.py --dataset_path path_to_your_dataset --output_dir path_to_save_model
-```
+echo "```bash"
+echo "python frame_interpolation.py --input_video high_res_video.mp4 --output_video smooth_video.mp4"
+echo "```"
 
-Make sure to preprocess your data and split it into training and testing sets.
+echo "## Contributing"
 
-## Example
+echo "If you'd like to contribute to this project, feel free to fork the repository and submit pull requests. Please ensure that you follow the coding style and write appropriate tests for new features."
 
-Here is an example of using the frame interpolation and super resolution pipeline:
+echo "### Steps to contribute:"
+echo "1. Fork this repository"
+echo "2. Create a feature branch (`git checkout -b feature-branch`)"
+echo "3. Commit your changes (`git commit -am 'Add new feature'`)"
+echo "4. Push to the branch (`git push origin feature-branch`)"
+echo "5. Open a pull request"
 
-1. **Step 1**: First, enhance the resolution of the low-resolution video using ESRGAN.
+echo "## License"
+echo "This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details."
 
-   ```bash
-   python super_resolution.py --input_video low_res_video.mp4 --output_video high_res_video.mp4
-   ```
+echo "## Acknowledgments"
+echo "- [ESRGAN](link-to-paper-or-repository) - Enhanced Super-Resolution Generative Adversarial Networks for Image Super-Resolution."
+echo "- [RIFE](link-to-paper-or-repository) - Real-Time Intermediate Flow Estimation for Frame Interpolation."
 
-2. **Step 2**: Then, apply frame interpolation using RIFE to generate additional frames.
-
-   ```bash
-   python frame_interpolation.py --input_video high_res_video.mp4 --output_video smooth_video.mp4
-   ```
-
-## Contributing
-
-If you'd like to contribute to this project, feel free to fork the repository and submit pull requests. Please ensure that you follow the coding style and write appropriate tests for new features.
-
-### Steps to contribute:
-
-1. Fork this repository
-2. Create a feature branch (`git checkout -b feature-branch`)
-3. Commit your changes (`git commit -am 'Add new feature'`)
-4. Push to the branch (`git push origin feature-branch`)
-5. Open a pull request
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-- [ESRGAN](link-to-paper-or-repository) - Enhanced Super-Resolution Generative Adversarial Networks for Image Super-Resolution.
-- [RIFE](link-to-paper-or-repository) - Real-Time Intermediate Flow Estimation for Frame Interpolation.
-
-## Contact
-
-If you have any questions or suggestions, feel free to reach out via Issues or contact [your-email@example.com](mailto:your-email@example.com).
-```
-
-This is all the content in one block, including everything from setup to usage, examples, contributing instructions, and acknowledgments. Feel free to copy and paste this directly into your README file.
+echo "## Contact"
+echo "If you have any questions or suggestions, feel free to reach out via Issues or contact [your-email@example.com](mailto:your-email@example.com)."
